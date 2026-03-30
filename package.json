@@ -1,0 +1,32 @@
+{
+  "name": "test-intel",
+  "version": "1.0.0",
+  "description": "AI-powered test failure analysis CLI tool",
+  "type": "module",
+  "bin": {
+    "test-intel": "./bin/test-intel.js"
+  },
+  "main": "./dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:sample": "node bin/test-intel.js tests/sample-failing/sample.test.ts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["testing", "cli", "ai", "analysis", "vitest"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0",
+    "tsx": "^4.19.0"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
